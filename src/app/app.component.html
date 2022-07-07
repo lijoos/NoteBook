@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="toolbar">
+        <button class="material-icons" (click) = "openNewtab()">upload_file</button> 
+        <button class="add material-icons" (click)="addNote()" >
+        note_add
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="app" *ngFor="let note of noteBook">
+        <app-notebook  (dismiss)="deleteNote($event)" [notBookItemId]="note.noteBookItemID" (focusout)="saveNote($event)" id="{{note.noteBookItemID}}">
+        </app-notebook>
+      </div>
+    </div>
+  </div>
+</div>
+
+

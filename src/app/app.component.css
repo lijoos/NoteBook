@@ -1,0 +1,23 @@
+
+  .app {
+    overflow: auto;
+    margin: 70px 0 30px;
+  }
+  .toolbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    z-index: 1;
+    background: #ccc;
+    height: 50px;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 10px;
+    font-size: xx-large;
+}

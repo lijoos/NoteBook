@@ -1,0 +1,35 @@
+.notebook {
+    background-color: rgb(243 238 238);
+    margin-bottom: 1em;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.note_header {
+    background: #656357;
+    border-radius: 8px 8px 0px 0px;
+    height: 35px;
+}
+
+.note_content {
+    padding: 10px;
+    height: 250px;
+    overflow-y: auto;
+    outline: none;
+}
+
+.close {
+    cursor:pointer;
+    color: #000;
+    float: right;
+    padding: 5px;
+}
+.noteBookTable {
+    width: 100%;
+}
+.noteBookHeader {
+   background: #ccc; 
+   padding: 7px;
+}
+.noteBookContent {
+    background-color: #f3eeee;
+}

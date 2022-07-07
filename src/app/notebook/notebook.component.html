@@ -1,0 +1,37 @@
+<div class="notebook">
+    <div class="note_header">
+        <span class="close material-icons" (click)="onDismiss($event)">close</span>
+    </div>
+    <!-- <div class="note_content" contenteditable="true" (blur)="onFocusOut($event)">
+        <ng-content></ng-content>
+    </div> -->
+      
+        <table class="noteBookTable">
+          <!-- <thead>
+            <tr>
+              <th class="noteBookHeader" scope="col">
+                <span>Online Note Book</span>
+                <span class="close material-icons" (click)="onDismiss($event)">close</span>
+            </th>
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr class="noteBookContent" *ngFor="let item of collection.data | paginate: config">
+              <th scope="row">
+                <div class="note_content"  contenteditable="true" (blur)="onFocusOut($event,item.id)">{{currentNote.content}}
+                    <div><ng-container *ngTemplateOutlet="elseTpl"></ng-container></div>
+                    <ng-template #elseTpl><ng-content ></ng-content> </ng-template>
+                    <!-- <ng-content></ng-content> -->
+                </div>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      
+        <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>
+
+
+
+
+
